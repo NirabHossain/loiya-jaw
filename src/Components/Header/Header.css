@@ -1,0 +1,13 @@
+header>div>*{
+    text-decoration: none;
+    padding: 20px;
+}
+
+header button{
+    font-size: calc(10px + 2vmin);
+    padding: 10px 30px;
+    background-color: tomato;
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
