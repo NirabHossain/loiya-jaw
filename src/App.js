@@ -9,11 +9,17 @@ import Blog from './Components/Blog/Blog';
 import Contact from './Components/Contact/Contact';
 import Login from './Components/Login/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import backGround from './images/Bg.png';
+import { useState } from 'react';
+import { createContext } from 'react';
+
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <Router>
-      <div>
+      <UserContext.Provider value={[loggedInUser, setLoggedInUser]} style={{ backgroundImage: `url(${backGround})` }} className= 'mainApp'>
         <Header/>
         <Switch>
 
@@ -21,7 +27,7 @@ function App() {
             <Home/>
           </Route>
 
-          <Route path="/destination">
+          <Route path="/destination/:vehicle">
             <Destination/>
           </Route>
 
@@ -41,7 +47,7 @@ function App() {
           </Route>
 
         </Switch>
-      </div>
+      </UserContext.Provider>
     </Router>
   );
 }

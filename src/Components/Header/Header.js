@@ -6,13 +6,13 @@ const Header = () => {
     return (
         <header className='App-header'>
             <div className='title-Name'>
-                <h1>Loiya Jaw</h1>
+                <h1><strong>Loiya Jaw</strong></h1>
             </div>
             <div>
-                <Link to="/">Home</Link>
-                <Link to="/destination">Destination</Link>
-                <Link to="/blog">Blog</Link>
-                <Link to="/contact">Contact</Link>
+                <Link to="/"><small>Home</small></Link>
+                <Link to="/destination"><small>Destination</small></Link>
+                <Link to="/blog"><small>Blog</small></Link>
+                <Link to="/contact"><small>Contact</small></Link>
                 <Link to="/login"><button>{loggedIn.name}</button></Link>
             </div>
 

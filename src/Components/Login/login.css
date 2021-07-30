@@ -1,0 +1,12 @@
+.details{
+    margin-top: 50px;
+    width: 60%;
+}
+.centered{
+    border: 2px solid red;
+    margin: 50px;
+    padding: 20px;
+}
+.centered>*{
+    margin-top: 10px;
+}
