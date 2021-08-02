@@ -1,13 +1,28 @@
-header>div>*{
-    text-decoration: none;
-    padding: 20px;
+.App-header {
+    min-height: 10vh;
+    align-items: center;
+    justify-content:space-around;
+    font-size: calc(10px + 2vmin);
+    margin-right: 50px;
+    padding: 10px;
 }
+ 
 
 header button{
-    font-size: calc(10px + 2vmin);
-    padding: 10px 30px;
-    background-color: tomato;
+    font-size: 70%;
+    padding: 5px 30px;
+    background-color: salmon;
     border-radius: 10px;
     color: white;
     border: none;
+}
+
+.links{    
+    display: flex;
+}
+.links>*{
+    display: inline;
+    text-decoration: none;
+    font-size:70%;
+    padding: 10px;
 }

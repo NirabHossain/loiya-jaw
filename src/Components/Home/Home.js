@@ -14,7 +14,7 @@ const Home = () => {
     return (
         <div className="container">
             <div className="row justify-content-around">
-                {keys.map(key=><div  className='col-md-3'  key={key} ><Link to={`/destination/${key}`} style={{textDecoration:'none', color: 'black'}}><Card image={images[key]} vehicle={key}/></Link></div>)}
+                {keys.map(key=><div  className='col-md-3 p-5'  key={key} ><Link to={`/destination/${key}`} style={{textDecoration:'none', color: 'black'}}><Card image={images[key]} vehicle={key}/></Link></div>)}
             </div>
         </div>
     );

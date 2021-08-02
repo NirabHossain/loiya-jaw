@@ -3,10 +3,25 @@
     width: 60%;
 }
 .centered{
-    border: 2px solid red;
+    border: 2px solid gray;
     margin: 50px;
-    padding: 20px;
+    /* padding: 20px; */
 }
 .centered>*{
     margin-top: 10px;
+}
+input{
+    padding: 5px;
+    padding-top: 10px;
+}
+.loginButton{
+    background-color: white;
+    border: 1px solid gray;
+    padding: 5px 20px;
+    border-radius: 20px;    
+    align-items: center;
+    justify-content: space-between;
+}
+.loginButton img{
+    height: 20px;
 }

@@ -12,12 +12,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import backGround from './images/Bg.png';
 import { useState } from 'react';
 import { createContext } from 'react';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import UserDetails from './UserDetails/UserDetails';
 
 export const UserContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
+    <div  style={{ backgroundImage: `url(${backGround})` }} className= 'mainApp'>
     <Router>
       <UserContext.Provider value={[loggedInUser, setLoggedInUser]} style={{ backgroundImage: `url(${backGround})` }} className= 'mainApp'>
         <Header/>
@@ -27,9 +30,13 @@ function App() {
             <Home/>
           </Route>
 
-          <Route path="/destination/:vehicle">
+          <PrivateRoute path="/destination/:vehicle">
             <Destination/>
-          </Route>
+          </PrivateRoute>
+
+          <PrivateRoute path="/destination">
+            <Destination/>
+          </PrivateRoute>
 
           <Route path="/blog">
             <Blog />
@@ -38,9 +45,14 @@ function App() {
           <Route path="/contact">
             <Contact/>
           </Route>
+
           <Route path="/login">
             <Login></Login>
           </Route>
+
+          <PrivateRoute path='/user/:details'>
+            <UserDetails/>
+          </PrivateRoute>
 
           <Route path="*">
             <NotFound/>
@@ -49,6 +61,7 @@ function App() {
         </Switch>
       </UserContext.Provider>
     </Router>
+    </div>
   );
 }
 
